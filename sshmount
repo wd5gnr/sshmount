@@ -14,7 +14,7 @@ fi
 
 
 # if called as sshunmount...
-if [ "$0" == sshunmount ]
+if [ $(basename "$0")  == sshunmount ]
 then
   echo Unmounting... 1>&2
   fusermount -u "$HOME/remote/$1"
